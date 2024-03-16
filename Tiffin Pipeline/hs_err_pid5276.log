@@ -1,0 +1,202 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8465a1be9, pid=5276, tid=2312
+#
+# JRE version:  (17.0.7+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.7+7-b1000.6, mixed mode, sharing, tiered, unknown gc, windows-amd64)
+# Problematic frame:
+# C  [jimage.dll+0x1be9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: Intel(R) Core(TM)2 Duo CPU     E8400  @ 3.00GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+Time: Mon Aug 21 00:55:58 2023 Eastern Daylight Time elapsed time: 0.045252 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x000000f3f0300000,0x000000f3f0400000],  sp=0x000000f3f03fd2c0,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [jimage.dll+0x1be9]
+C  [jimage.dll+0x1d77]
+C  [jimage.dll+0x2655]
+V  [jvm.dll+0x1f5f7a]
+V  [jvm.dll+0xb09fe]
+V  [jvm.dll+0x7f341c]
+V  [jvm.dll+0x3f305f]
+V  [jvm.dll+0x3f4b91]
+C  [jli.dll+0x528f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526b1]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x000000000001196c
+
+
+Registers:
+RAX=0x0000000000004654, RBX=0x000000f3f03fd3b1, RCX=0x00007ff8465a6000, RDX=0x0000000000004654
+RSP=0x000000f3f03fd2c0, RBP=0x000000f3f03fd3b0, RSI=0x0000000000007554, RDI=0x000000f3f03fd3b0
+R8 =0x00007ff8465a4288, R9 =0x000000000000001c, R10=0x00007ff83c760000, R11=0x00007ff8465a6000
+R12=0x0000000000000001, R13=0x000002c7fac9fa00, R14=0x000000f3f03fe420, R15=0x00007ff818225ed8
+RIP=0x00007ff8465a1be9, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000f3f03fd2c0)
+0x000000f3f03fd2c0:   0000000000000160 00000000000003ff
+0x000000f3f03fd2d0:   000002c7fad3d1b0 000000f3f03fd430
+0x000000f3f03fd2e0:   000002c7facd4000 00007ff8465a1d77
+0x000000f3f03fd2f0:   000000000000000b 000002c7facd4000
+0x000000f3f03fd300:   000000f3f03fd351 0000000000000101
+0x000000f3f03fd310:   00000000000006f5 000002c7fac90150
+0x000000f3f03fd320:   00000000000006f5 00000000000006f5
+0x000000f3f03fd330:   00000000000006f5 000002c7fac90000
+0x000000f3f03fd340:   000002c7fadc0000 00007ff84d4ae2a9
+0x000000f3f03fd350:   0000f2c16e36263d 00000000de0003dd
+0x000000f3f03fd360:   00007ff818204790 0000000000000017
+0x000000f3f03fd370:   000002c7facd4000 000000f3f03fe420
+0x000000f3f03fd380:   000000000000000b 00007ff8465a2655
+0x000000f3f03fd390:   0000000000000774 0000000000000774
+0x000000f3f03fd3a0:   0000000000000774 000002c7fac90000
+0x000000f3f03fd3b0:   61622e6176616a2f 692f6b646a2f6573 
+
+Instructions: (pc=0x00007ff8465a1be9)
+0x00007ff8465a1ae9:   48 85 c9 74 1d 80 3d 1b 45 00 00 00 74 06 48 8b
+0x00007ff8465a1af9:   53 18 eb 04 48 8b 53 40 e8 ae 0e 00 00 48 83 63
+0x00007ff8465a1b09:   48 00 8b 4b 0c 83 f9 ff 74 09 e8 e4 0c 00 00 83
+0x00007ff8465a1b19:   4b 0c ff 48 8b 4b 70 48 85 c9 74 0f ba 10 00 00
+0x00007ff8465a1b29:   00 e8 fd 0e 00 00 48 83 63 70 00 48 83 c4 20 5b
+0x00007ff8465a1b39:   c3 cc cc 40 53 48 83 ec 20 48 8b d9 48 8d 0d d4
+0x00007ff8465a1b49:   46 00 00 e8 b3 0c 00 00 83 6b 08 01 75 24 48 8b
+0x00007ff8465a1b59:   d3 48 8d 0d b7 44 00 00 e8 22 08 00 00 48 8b cb
+0x00007ff8465a1b69:   e8 de fe ff ff ba 78 00 00 00 48 8b cb e8 b1 0e
+0x00007ff8465a1b79:   00 00 48 8d 0d 9e 46 00 00 48 83 c4 20 5b e9 80
+0x00007ff8465a1b89:   0c 00 00 48 89 5c 24 08 48 89 74 24 10 57 48 83
+0x00007ff8465a1b99:   ec 20 41 8b f1 4d 8b c8 48 8b fa 4c 8b d9 4d 85
+0x00007ff8465a1ba9:   c0 74 78 85 f6 74 74 44 8a 12 48 8d 5a 01 48 8b
+0x00007ff8465a1bb9:   d3 b8 93 01 00 01 eb 12 69 c0 93 01 00 01 41 0f
+0x00007ff8465a1bc9:   b6 ca 44 8a 12 33 c1 48 ff c2 45 84 d2 75 e9 4d
+0x00007ff8465a1bd9:   8b 03 0f ba f0 1f 33 d2 49 8b cb f7 f6 48 63 c2
+0x00007ff8465a1be9:   41 8b 14 81 41 ff 50 08 85 c0 7e 24 8a 0f eb 10
+0x00007ff8465a1bf9:   69 c0 93 01 00 01 0f b6 c9 33 c1 8a 0b 48 ff c3
+0x00007ff8465a1c09:   84 c9 75 ec 0f ba f0 1f 33 d2 f7 f6 8b c2 eb 0e
+0x00007ff8465a1c19:   79 09 83 c9 ff 2b c8 8b c1 eb 03 83 c8 ff 48 8b
+0x00007ff8465a1c29:   5c 24 30 48 8b 74 24 38 48 83 c4 20 5f c3 cc 48
+0x00007ff8465a1c39:   89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 48 8b
+0x00007ff8465a1c49:   f1 48 8d 0d cf 45 00 00 e8 ae 0b 00 00 33 ff 39
+0x00007ff8465a1c59:   3d ba 43 00 00 76 24 48 8b 05 b9 43 00 00 48 8b
+0x00007ff8465a1c69:   d6 48 8b 1c f8 48 8b 0b e8 64 1e 00 00 85 c0 74
+0x00007ff8465a1c79:   2b ff c7 3b 3d 96 43 00 00 72 dc 33 db 48 8d 0d
+0x00007ff8465a1c89:   93 45 00 00 e8 7a 0b 00 00 48 8b 74 24 38 48 8b
+0x00007ff8465a1c99:   c3 48 8b 5c 24 30 48 83 c4 20 5f c3 ff 43 08 eb
+0x00007ff8465a1ca9:   dc cc cc 48 89 5c 24 08 48 89 74 24 10 57 48 83
+0x00007ff8465a1cb9:   ec 20 48 8b d9 48 8b f2 48 8b 49 10 49 8b f8 8b
+0x00007ff8465a1cc9:   53 30 48 8b 01 ff 50 20 4c 8b 43 50 48 8b d6 48
+0x00007ff8465a1cd9:   8b 4b 10 44 8b c8 e8 a8 fe ff ff 83 f8 ff 74 38 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Precious Log:
+<Not initialized>
+
+
+Dynamic libraries:
+0x00007ff6624f0000 - 0x00007ff6624fa000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\java.exe
+0x00007ff84d490000 - 0x00007ff84d688000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff84b4f0000 - 0x00007ff84b5af000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff84ab70000 - 0x00007ff84ae66000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff848450000 - 0x00007ff8484e1000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff84b200000 - 0x00007ff84b300000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff83ac90000 - 0x00007ff83aca7000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\jli.dll
+0x00007ff84cb80000 - 0x00007ff84cd1d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff84b1d0000 - 0x00007ff84b1f2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff84d260000 - 0x00007ff84d28c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff84b330000 - 0x00007ff84b445000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff84b450000 - 0x00007ff84b4ed000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff83b420000 - 0x00007ff83b6ba000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff84d300000 - 0x00007ff84d39e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff83c760000 - 0x00007ff83c77b000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\VCRUNTIME140.dll
+0x00007ff84d1b0000 - 0x00007ff84d1e0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff846510000 - 0x00007ff84651c000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\vcruntime140_1.dll
+0x00007ff82b2e0000 - 0x00007ff82b36d000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\msvcp140.dll
+0x00007ff8178e0000 - 0x00007ff818560000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\server\jvm.dll
+0x00007ff84d3a0000 - 0x00007ff84d44f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff84c110000 - 0x00007ff84c1ac000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff84ca40000 - 0x00007ff84cb66000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8310b0000 - 0x00007ff8310b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff837ec0000 - 0x00007ff837ee7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8407c0000 - 0x00007ff8407ca000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff84d290000 - 0x00007ff84d2fb000 	C:\WINDOWS\System32\ws2_32.DLL
+0x00007ff848a30000 - 0x00007ff848a42000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8465a0000 - 0x00007ff8465aa000 	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\jimage.dll
+0x00007ff837fa0000 - 0x00007ff838184000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff837f40000 - 0x00007ff837f74000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff84b140000 - 0x00007ff84b1c2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\jbr\bin\server
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Git\mingw64\libexec\git-core;C:\Program Files\Git\mingw64\libexec\git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Golden Fish & Chips\bin;C:\Users\Golden Fish & Chips\PycharmProjects\pythonProject5\venv\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\DTS\Binn;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Users\Golden Fish & Chips\AppData\Local\Programs\Python\Python311;C:\Users\Golden Fish & Chips\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\Golden Fish & Chips\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\Golden Fish & Chips\AppData\Local\Programs\Python\Python311;C:\Users\Golden Fish & Chips\AppData\Local\Microsoft\WindowsApps
+USERNAME=Golden Fish & Chips
+DISPLAY=:0.0
+LC_ALL=en_US.UTF-8
+TERM=xterm-256color
+TMPDIR=C:\Users\GOLDEN~1\AppData\Local\Temp
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+TMP=C:\Users\GOLDEN~1\AppData\Local\Temp
+TEMP=C:\Users\GOLDEN~1\AppData\Local\Temp
+
+
+JNI global refs:
+JNI global refs: 0, weak refs: 0
+
+JNI global refs memory usage: 0, weak refs: 0
+
+OOME stack traces (most recent first):
+Classloader memory used:
+Not available (crashed in non-Java thread)
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+OS uptime: 1 days 13:37 hours
+
+CPU: total 2 (initial active 0) 
+
+Memory: 4k page, system-wide physical 3991M (433M free)
+TotalPageFile size 16279M (AvailPageFile size 3M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.7+7-b1000.6) for windows-amd64 JRE (17.0.7+7-b1000.6), built on 2023-07-07 by "builduser" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.

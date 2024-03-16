@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20230908 16:41:42.226" rpa="false" schemaversion="4">
+<suite id="s1" name="Play" source="C:\Users\Golden Fish &amp; Chips\PycharmProjects\pythonProject5\play.robot">
+<test id="s1-t1" name="Mytest" line="4">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.youtube.com/watch?v=wiurYrCDKyI</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230908 16:41:42.647" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/watch?v=wiurYrCDKyI'.</msg>
+<status status="PASS" starttime="20230908 16:41:42.647" endtime="20230908 16:42:03.084"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230908 16:42:10.090" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20230908 16:42:03.088" endtime="20230908 16:42:10.090"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath=//body</arg>
+<arg>k</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230908 16:42:10.092" level="INFO">Sending key(s) ('k',) to xpath=//body element.</msg>
+<msg timestamp="20230908 16:42:10.418" level="INFO">Sending key k</msg>
+<status status="PASS" starttime="20230908 16:42:10.090" endtime="20230908 16:42:10.502"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>200 minutes 10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" starttime="20230908 16:42:10.506" endtime="20230908 16:42:27.080"/>
+</kw>
+<status status="FAIL" starttime="20230908 16:41:42.647" endtime="20230908 16:42:27.080">Execution terminated by signal</status>
+</test>
+<status status="FAIL" starttime="20230908 16:41:42.241" endtime="20230908 16:42:27.085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Play">Play</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
